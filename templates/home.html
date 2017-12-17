@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Ted Talks: What's most interesting to you?</h1>
+    <form method="post" action="" class="searchform">
+        <input types="text" id="searchInput" name="searchinput" placeholder="Type something">
+        <input type="submit">
+    </form>
+
+    <div class="output"></div>
+    {% for videoList in videoData %}
+        <div>
+            <div>{{videoList}}</div>
+        </div>
+    {% endfor %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init" charset="utf-8"></script>
+</body>
+</html>
